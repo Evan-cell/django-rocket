@@ -1,4 +1,174 @@
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1>django rocket</h1>
+<div class="header">
+    <video src="{% static 'vids/vid5.mp4' %}" class="vid-bg" autoplay loop muted></video>
+    <div class="nav-area">
+        <div class="logo">
+            Django 
+        </div>
+        <div class="menu-area">
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </div>
+    </div>
+    <div class="welcome-text">
+        <h2>Django Rocket</h2>
+        <p>Welcome to Django Rocket where u learn to master all the concepts of Django and move from beginner to mastery</p>
+    </div>
+</div>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Montserrat', sans-serif;
+    }
+    .wrapper{
+        width: 1170px;
+        margin: 0 auto;
+    }
+    .header{
+        overflow: hidden;
+        height: 100vh;
+        position: relative;
+    }
+    .vid-bg{
+        position: absolute;  
+        top: 0;   
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        
+    }
+    .nav-area{
+        background: rgba(0,0,0,0.7);
+        height: 60px;
+        position: absolute;
+        width: 100%;
+    }
+    .menu-area{
+        float: right;
+        list-style: none;
+        margin: 20px;
+    }
+    .menu-area li{
+        display: inline-block;
+        margin: 0 50px;
+    }
+    .menu-area li a{
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 10px;
+        letter-spacing: 2px;
+    }
+    .menu-area li.active a{
+        color: deepskyblue;
+    }
+    .menu-area li a:hover{
+        color: deepskyblue;
+    }
+    .logo{
+        margin: 10px 50px;
+        height: 60px;
+        float: left;
+        color: #fff;
+        font-size: 35px;
+        text-transform: capitalize;
+    }
+    .header .welcome-text{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .welcome-text h2{
+        color: #fff;
+        font-size: 80px;
+        margin: 0;
+        font-family: 'Berkshire Swash', cursive;
+    }
+    .welcome-text p{
+        color: #fff;
+        font-size: 18px;
+        width: 45%;
+        line-height: 1.8;
+        margin: auto;
+
+    }
+    @media (min-width: 768px) and (max-width: 991px){
+        .welcome-text p{
+            width: 95%;
+        }
+    }
+    @media (min-width: 820px) and (max-width: 1180px){
+        .logo{
+            float: none;
+            text-align: center;
+            margin: 5px 0;
+            font-size: 35px;
+            height: 45px;
+        }
+        .menu-area{
+            float: none;
+            text-align: center;
+            margin: 0;
+        }
+        .menu-area li{
+            margin: 0;
+        }
+        .menu-area li a{
+            padding: 5px 2px;
+            font-size: 12px;
+        }
+        .nav-area{
+            height: 90px;
+        }
+        .welcome-text h2{
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+        .welcome-text p{
+            width: 90%;
+            line-height: 1.5;
+        }
+    }
+    @media (max-width: 767px){
+        .logo{
+            float: none;
+            text-align: center;
+            margin: 5px 0;
+            font-size: 35px;
+            height: 45px;
+        }
+        .menu-area{
+            float: none;
+            text-align: center;
+            margin: 0;
+        }
+        .menu-area li{
+            margin: 0;
+        }
+        .menu-area li a{
+            padding: 5px 2px;
+            font-size: 12px;
+        }
+        .nav-area{
+            height: 90px;
+        }
+        .welcome-text h2{
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+        .welcome-text p{
+            width: 90%;
+            line-height: 1.5;
+        }
+    }
+</style>
 {% endblock %}
